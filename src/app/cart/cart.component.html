@@ -1,0 +1,50 @@
+<div>
+  <div v-if="!panierLivres.length" class="container vide">
+    <h1 > Votre panier est vide</h1>
+  </div>
+  <section *ngIf="getBookOfCart().length" id="advertisement">
+    <div class="container">
+      <div class="offreCommercial">
+        <p>La meilleur offre commerciale qui correspond à votre panier est  <span class="promo">{{bestCommercialOffer}}€</span> (Sans la promo  {{getSumPriceOfBookCart()}}€)</p>
+      </div>
+    </div>
+  </section>
+  <section *ngIf="getBookOfCart().length" id="cart_items">
+    <div class="container">
+      <div class="table-responsive cart_info">
+        <table class="table table-condensed">
+          <thead>
+          <tr class="cart_menu">
+            <td class="image">Livre</td>
+            <td class="description"></td>
+            <td class="price">Prix</td>
+            <td class="quantity">Quantité</td>
+            <td class="total">Totale</td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let book of getBookOfCart()">
+            <td class="cart_product">
+              <a href=""><img width="110" height="160" [src]="book.cover" alt=""></a>
+            </td>
+            <td class="cart_description">
+              <h4><a href="">{{book.title}}</a></h4>
+            </td>
+            <td class="cart_price">
+              <p>{{book.price}}€</p>
+            </td>
+            <td class="cart_quantity">
+              <div class="cart_quantity_button">
+                <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
+              </div>
+            </td>
+            <td class="cart_total">
+              <p class="cart_total_price">{{book.price}}€</p>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>

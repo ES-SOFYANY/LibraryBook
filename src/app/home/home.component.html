@@ -1,0 +1,12 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="features_items">
+        <h2 class="title text-center">Les derniers livres</h2>
+        <div *ngFor="let book of getSearchedBooks()" class="col-sm-4">
+         <app-book [book]="book"></app-book>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

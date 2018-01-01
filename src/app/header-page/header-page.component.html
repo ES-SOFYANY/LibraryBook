@@ -1,0 +1,22 @@
+<header>
+  <div class="header-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="mainmenu pull-left">
+            <ul class="nav navbar-nav collapse navbar-collapse">
+              <li><a [routerLink]="['/home']">Accueil</a></li>
+              <li class="dropdown"><a [routerLink]="['/panier']">Mon panier</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="search_box pull-right">
+            <input type="text"  id="SerachInput" [(ngModel)]="search" (ngModelChange)="triggerChange()" placeholder="Search"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
