@@ -15,15 +15,15 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
  
 Il était une fois, une collection de cinq livres racontant les histoires d’un formidable héros nommé Henri Potier. Tous les enfants du monde trouvaient les histoires de cet adolescent fantastiques. L’éditeur de cette collection, dans un immense élan de générosité (mais aussi pour booster ses ventes ;)), décida de mettre en place des offres commerciales aussi aléatoires que l’issue des sorts de Ron Weasley. 
 
-#####Développer un site web  comprenant deux interfaces : 
+###Développer un site web  comprenant deux interfaces : 
 
 ● La première permet d’afficher les livres que l’on souhaite acheter et d’effectuer une recherche libre
 
 ● La seconde récapitule le panier où sera appliquée la meilleure offre commerciale possible. 
 
 
-`Un exemple Calcul Pour deux livres (à 35 et 30€), la requête ressemblera à : 
-`
+**Un exemple Calcul Pour deux livres (à 35 et 30€), la requête ressemblera à :** 
+
 "api/books/id1,id2/commercialOffers" Le service enverra les offres applicables à ce panier sous le format JSON suivant :
 
 `{
@@ -42,7 +42,8 @@ Il était une fois, une collection de cinq livres racontant les histoires d’un
 
 
 ###
-#####Quelques explications:
+**Quelques explications:**
+
 ● La première offre identifiée par un type ‘percentage’ est une réduction s’appliquant sur le prix de l’ensemble des livres. Le montant de la réduction est dans ‘value’; 
 
 ● La deuxième offre identifiée par un type ‘minus’ est une déduction directement applicable en caisse d’un montant de ‘value’; 
